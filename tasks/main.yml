@@ -1,0 +1,11 @@
+---
+- name: Install fail2ban
+  apt:
+    name: fail2ban
+    state: present
+
+- name: Update ignoreip
+  lineinfile:
+    path: /etc/fail2ban/jail.conf
+    regexp: '^#?ignoreip ='
+    line: 'ignoreip = 127.0.0.1/8 ::1'
