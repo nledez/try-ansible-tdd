@@ -14,4 +14,4 @@ def test_fail2ban_installed(host):
 
 def test_jail_right_ignoreip(host):
     jail = host.file('/etc/fail2ban/jail.conf')
-    assert jail.contains('^ignoreip = 127.0.0.1/8 ::1$')
+    assert jail.contains('^ignoreip = 127.0.0.1/8 192.168.1.1$')

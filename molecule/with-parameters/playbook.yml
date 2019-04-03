@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  roles:
+    - role: ansible-role-vscode
+  vars:
+    fail2ban_ignoreip: 127.0.0.1/8 192.168.1.1

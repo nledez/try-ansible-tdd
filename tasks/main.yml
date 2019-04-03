@@ -8,4 +8,4 @@
   lineinfile:
     path: /etc/fail2ban/jail.conf
     regexp: '^#?ignoreip ='
-    line: 'ignoreip = 127.0.0.1/8 ::1'
+    line: 'ignoreip = {{ fail2ban_ignoreip }}'
